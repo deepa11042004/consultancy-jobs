@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Consultancy Platform - Find Your Dream Job</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <span class="logo-text">JobPortal</span>
+            </div>
+            <div class="nav-links">
+                <a href="#">Jobs</a>
+                <a href="#">Companies</a>
+                <a href="#">Services</a>
+                <a href="#">Resources</a>
+            </div>
+            <div class="nav-actions">
+                <button class="btn btn-outline">Login</button>
+                <button class="btn btn-primary">Employer Login</button>
+            </div>
+            <div class="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 1. HERO SECTION -->
+    <section class="hero-section">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="badge">India's #1 Job Platform</div>
+                <h1>Your job search ends here</h1>
+                <p class="subtext">Discover 5 lakh+ career opportunities</p>
+                
+                <div class="search-box">
+                    <div class="search-input-group">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search jobs by title, skill">
+                    </div>
+                    <div class="divider"></div>
+                    <div class="search-input-group">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <select>
+                            <option value="">Select Location</option>
+                            <option value="delhi">Delhi NCR</option>
+                            <option value="bangalore">Bangalore</option>
+                            <option value="mumbai">Mumbai</option>
+                        </select>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="search-input-group">
+                        <i class="fas fa-briefcase"></i>
+                        <select>
+                            <option value="">Experience</option>
+                            <option value="fresher">Fresher</option>
+                            <option value="1-3">1-3 Years</option>
+                            <option value="3+">3+ Years</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-primary search-btn">Search jobs</button>
+                </div>
+
+                <div class="trust-badges">
+                    <p class="small-label">Proud to Support</p>
+                    <div class="govt-logos">
+                       <span class="logo-placeholder">Digital India</span>
+                       <span class="logo-placeholder">Startup India</span>
+                    </div>
+                </div>
+
+                <div class="trusted-companies">
+                    <p class="small-label">Trusted by 1000+ enterprises and 7 lakh+ MSMEs</p>
+                    <div class="company-logos">
+                        <span class="logo-text">NATO</span>
+                        <span class="logo-text">Asian Paints</span>
+                        <span class="logo-text">Mahindra</span>
+                        <span class="logo-text">Success Star</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-placeholder-large">
+                    <i class="fas fa-user-check"></i>
+                    <span>App Mockup & User</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. AI JOB PREP SECTION -->
+    <section class="ai-prep-section">
+        <div class="container ai-prep-container">
+            <div class="ai-content">
+                <div class="icon-box">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <h2>Job Prep with AI</h2>
+                <p>Practice interviews with Free AI Interview Coach designed to help you ace your next big opportunity.</p>
+                <button class="btn btn-white">View all preps</button>
+            </div>
+            <div class="ai-cards">
+                <div class="card p-card p-card-1">
+                    <div class="card-header">
+                        <h4>Telemetry Engineer</h4>
+                        <span class="company-name">Formula 1</span>
+                    </div>
+                    <button class="btn btn-sm btn-primary">Practice Interview</button>
+                </div>
+                <!-- Stacked background cards implicitly styled via CSS -->
+                <div class="card p-card p-card-2"></div>
+                <div class="card p-card p-card-3"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. POPULAR SEARCHES SECTION -->
+    <section class="section popular-searches">
+        <div class="container">
+            <h2 class="section-title">Popular Searches on Platform</h2>
+            <div class="grid-6">
+                <!-- Card 1 -->
+                <div class="category-card">
+                    <div class="trending-badge">Trending #1</div>
+                    <h3>Jobs for Freshers</h3>
+                    <div class="cat-img"></div>
+                    <a href="#">View all ></a>
+                </div>
+                <!-- Card 2 -->
+                <div class="category-card">
+                    <div class="trending-badge">Trending #2</div>
+                    <h3>Work from home</h3>
+                    <div class="cat-img"></div>
+                    <a href="#">View all ></a>
+                </div>
+                <!-- Card 3 -->
+                <div class="category-card">
+                    <div class="trending-badge">Trending #3</div>
+                    <h3>Part time Jobs</h3>
+                    <div class="cat-img"></div>
+                    <a href="#">View all ></a>
+                </div>
+                <!-- Card 4 -->
+                <div class="category-card">
+                    <div class="trending-badge">Trending #4</div>
+                    <h3>Jobs for Women</h3>
+                    <div class="cat-img"></div>
+                    <a href="#">View all ></a>
+                </div>
+                <!-- Card 5 -->
+                <div class="category-card">
+                    <div class="trending-badge">Trending #5</div>
+                    <h3>International Jobs</h3>
+                    <div class="cat-img"></div>
+                    <a href="#">View all ></a>
+                </div>
+                <!-- Card 6 -->
+                <div class="category-card">
+                    <div class="trending-badge">Trending #6</div>
+                    <h3>Full time Jobs</h3>
+                    <div class="cat-img"></div>
+                    <a href="#">View all ></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. JOB OPENINGS IN TOP COMPANIES -->
+    <section class="section top-companies">
+        <div class="container">
+            <h2 class="section-title">Job Openings in Top companies</h2>
+            <div class="grid-4">
+                <!-- Company 1 -->
+                <div class="company-card">
+                    <div class="company-logo">BA</div>
+                    <h3>Bajaj Allianz</h3>
+                    <p>Leading insurance provider</p>
+                    <a href="#" class="view-link">View jobs ></a>
+                </div>
+                <!-- Company 2 -->
+                <div class="company-card">
+                    <div class="company-logo">PY</div>
+                    <h3>Paytm</h3>
+                    <p>Digital payments pioneer</p>
+                    <a href="#" class="view-link">View jobs ></a>
+                </div>
+                <!-- Company 3 -->
+                <div class="company-card">
+                    <div class="company-logo">ZM</div>
+                    <h3>Zomato</h3>
+                    <p>Food delivery leader</p>
+                    <a href="#" class="view-link">View jobs ></a>
+                </div>
+                <!-- Company 4 -->
+                <div class="company-card">
+                    <div class="company-logo">SW</div>
+                    <h3>Swiggy</h3>
+                    <p>Food & grocery delivery</p>
+                    <a href="#" class="view-link">View jobs ></a>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <button class="btn btn-outline">View all companies</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. TRENDING JOB ROLES SECTION -->
+    <section class="section trending-roles">
+        <div class="container">
+            <h2 class="section-title">Trending job roles</h2>
+            <div class="pill-container">
+                <a href="#" class="pill">
+                    <i class="fas fa-headset"></i> Telecalling / BPO <span class="count">12k</span>
+                </a>
+                <a href="#" class="pill">
+                    <i class="fas fa-truck"></i> Delivery Person <span class="count">8k</span>
+                </a>
+                <a href="#" class="pill">
+                    <i class="fas fa-calculator"></i> Accounts / Finance <span class="count">4k</span>
+                </a>
+                <a href="#" class="pill">
+                    <i class="fas fa-user-tie"></i> Field Sales <span class="count">10k</span>
+                </a>
+                <a href="#" class="pill">
+                    <i class="fas fa-chart-line"></i> Business Dev <span class="count">3k</span>
+                </a>
+                <a href="#" class="pill">
+                    <i class="fas fa-store"></i> Retail Sales <span class="count">5k</span>
+                </a>
+                <a href="#" class="pill">
+                    <i class="fas fa-bolt"></i> Electrician <span class="count">1k</span>
+                </a>
+                <a href="#" class="pill">
+                    <i class="fas fa-laptop-code"></i> Backend Engineer <span class="count">2k</span>
+                </a>
+                <a href="#" class="pill">
+                    <i class="fas fa-user-nurse"></i> Nurse <span class="count">1.5k</span>
+                </a>
+            </div>
+            <div class="text-center mt-4">
+                <button class="btn btn-outline">View all roles</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. TESTIMONIALS SECTION -->
+    <section class="section testimonials">
+        <div class="container testimonial-container">
+            <div class="testimonial-intro">
+                <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                <h3>Join the community of 5 crore satisfied job seekers...</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                </div>
+                <p>Rated 4.7/5 based on user reviews</p>
+            </div>
+            <div class="testimonial-cards">
+                <!-- Testimonial 1 -->
+                <div class="t-card">
+                    <div class="profile">
+                        <div class="avatar">R</div>
+                        <div class="info">
+                            <h4>Ravi K.</h4>
+                            <div class="stars-sm">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="review">"Got a job in 3 days! Amazing platform."</p>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="t-card">
+                    <div class="profile">
+                        <div class="avatar">S</div>
+                        <div class="info">
+                            <h4>Sneha M.</h4>
+                            <div class="stars-sm">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="review">"The HR called me directly. Very fast process."</p>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="t-card">
+                    <div class="profile">
+                        <div class="avatar">A</div>
+                        <div class="info">
+                            <h4>Amit P.</h4>
+                            <div class="stars-sm">★★★★☆</div>
+                        </div>
+                    </div>
+                    <p class="review">"Best app for local jobs in my city."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. DOWNLOAD APP SECTION -->
+    <section class="download-section">
+        <div class="container download-container">
+            <div class="download-content">
+                <h2>Download the App!</h2>
+                <p>Get jobs on the go and connect with recruiters instantly. Join 5 Crore+ users.</p>
+                <div class="app-buttons">
+                    <button class="btn-store hover-lift">Google Play</button>
+                    <button class="btn-store hover-lift">App Store</button>
+                </div>
+                <div class="qr-code">
+                    <div class="qr-placeholder">QR</div>
+                    <span>Scan to download</span>
+                </div>
+            </div>
+            <div class="download-image">
+                <div class="phone-mockup">
+                    <div class="screen-content">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Job Applied!</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. EMPLOYER CTA SECTION -->
+    <section class="section employer-section">
+        <div class="container">
+            <h2 class="section-title">For Employers</h2>
+            <div class="employer-card">
+                <div class="emp-image">
+                    <!-- Image of professionals -->
+                    <div class="img-placeholder-rect"></div>
+                </div>
+                <div class="emp-content">
+                    <h2>Want to hire?</h2>
+                    <p>Find the best candidates from 5 crore active job seekers! Post a job in 2 minutes.</p>
+                    <button class="btn btn-primary btn-lg">Post a Job for Free</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. FOOTER LINKS SECTION -->
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h4>Find Jobs</h4>
+                <ul>
+                    <li><a href="#">Jobs in Delhi</a></li>
+                    <li><a href="#">Jobs in Mumbai</a></li>
+                    <li><a href="#">Jobs in Bangalore</a></li>
+                    <li><a href="#">Jobs in Hyderabad</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Job Categories</h4>
+                <ul>
+                    <li><a href="#">Work from Home</a></li>
+                    <li><a href="#">Part Time Jobs</a></li>
+                    <li><a href="#">Fresher Jobs</a></li>
+                    <li><a href="#">Night Shift Jobs</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#">Resume Builder</a></li>
+                    <li><a href="#">Career Guidance</a></li>
+                    <li><a href="#">Interview Tips</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Fraud Alert</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 10. FINAL FOOTER BAR -->
+    <div class="final-footer">
+        <div class="container final-footer-container">
+            <div class="social-side">
+                <span class="logo-text-sm">JobPortal</span>
+                <span class="social-label">Follow us:</span>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="app-side">
+                <span>Download App:</span>
+                <div class="buttons-small">
+                    <button class="btn-xs">Play Store</button>
+                    <button class="btn-xs">App Store</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
