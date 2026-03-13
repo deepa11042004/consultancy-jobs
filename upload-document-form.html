@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Upload Your Documents</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body class="upload-page">
+    <header class="upload-header">
+      <a href="jobs.html" class="back-link">
+        <i class="fas fa-arrow-left"></i>
+        Back to Department Selection
+      </a>
+      <div class="upload-title">
+        <h1>Upload Your Documents</h1>
+        <p>Department: <span id="deptName">Quality</span></p>
+      </div>
+    </header>
+
+    <main class="upload-container">
+      <section class="upload-card">
+        <header class="upload-card-header">
+          <div class="upload-card-icon">
+            <i class="fas fa-file-upload"></i>
+          </div>
+          <div>
+            <h2>Upload Documents</h2>
+            <p>Please upload all required documents</p>
+          </div>
+        </header>
+
+        <form id="uploadForm" class="upload-form" novalidate>
+          <div class="upload-field">
+            <label class="upload-label" for="resume"
+              >Resume <span class="required">*</span></label
+            >
+            <div class="file-drop" data-name="resume">
+              <div class="file-drop-content">
+                <i class="fas fa-file-arrow-up"></i>
+                <div>
+                  <strong>Click to upload resume</strong>
+                  <div class="file-hint">(PDF, DOC, DOCX)</div>
+                </div>
+              </div>
+              <input
+                id="resume"
+                name="resume"
+                type="file"
+                accept=".pdf,.doc,.docx"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="upload-field">
+            <label class="upload-label" for="panCard"
+              >PAN Card <span class="optional">(Optional)</span></label
+            >
+            <div class="file-drop" data-name="panCard">
+              <div class="file-drop-content">
+                <i class="fas fa-id-card"></i>
+                <div>
+                  <strong>Click to upload PAN card</strong>
+                  <div class="file-hint">(PDF, JPG, PNG)</div>
+                </div>
+              </div>
+              <input
+                id="panCard"
+                name="panCard"
+                type="file"
+                accept=".pdf,.jpg,.jpeg,.png"
+              />
+            </div>
+          </div>
+
+          <div class="upload-field">
+            <label class="upload-label" for="aadhaarCard"
+              >Aadhaar Card <span class="optional">(Optional)</span></label
+            >
+            <div class="file-drop" data-name="aadhaarCard">
+              <div class="file-drop-content">
+                <i class="fas fa-id-badge"></i>
+                <div>
+                  <strong>Click to upload Aadhaar card</strong>
+                  <div class="file-hint">(PDF, JPG, PNG)</div>
+                </div>
+              </div>
+              <input
+                id="aadhaarCard"
+                name="aadhaarCard"
+                type="file"
+                accept=".pdf,.jpg,.jpeg,.png"
+              />
+            </div>
+          </div>
+
+          <div class="upload-field">
+            <label class="upload-label" for="photo"
+              >Your Photo <span class="optional">(Optional)</span></label
+            >
+            <div class="file-drop" data-name="photo">
+              <div class="file-drop-content">
+                <i class="fas fa-camera"></i>
+                <div>
+                  <strong>Click to upload your photo</strong>
+                  <div class="file-hint">(JPG, PNG)</div>
+                </div>
+              </div>
+              <input
+                id="photo"
+                name="photo"
+                type="file"
+                accept=".jpg,.jpeg,.png"
+              />
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary w-full mt-4">
+            <i class="fas fa-rocket"></i>
+            Submit Application
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <script>
+      const deptName =
+        new URLSearchParams(window.location.search).get("dept") || "Quality";
+      document.getElementById("deptName").textContent = deptName;
+
+      const uploadForm = document.getElementById("uploadForm");
+      const fileDrops = document.querySelectorAll(".file-drop");
+
+      fileDrops.forEach((drop) => {
+        const input = drop.querySelector("input[type=file]");
+        const content = drop.querySelector(".file-drop-content");
+
+        const setFileName = (file) => {
+          if (!file) return;
+          const name = document.createElement("div");
+          name.className = "file-name";
+          name.textContent = file.name;
+          const existing = drop.querySelector(".file-name");
+          if (existing) existing.remove();
+          drop.appendChild(name);
+        };
+
+        input.addEventListener("change", () => {
+          const file = input.files[0];
+          setFileName(file);
+        });
+
+        drop.addEventListener("click", () => input.click());
+        drop.addEventListener("dragover", (e) => {
+          e.preventDefault();
+          drop.classList.add("dragover");
+        });
+        drop.addEventListener("dragleave", () => {
+          drop.classList.remove("dragover");
+        });
+        drop.addEventListener("drop", (e) => {
+          e.preventDefault();
+          drop.classList.remove("dragover");
+          const file = e.dataTransfer.files[0];
+          if (!file) return;
+          input.files = e.dataTransfer.files;
+          setFileName(file);
+        });
+      });
+
+      uploadForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const resume = document.getElementById("resume");
+        if (!resume.files || !resume.files.length) {
+          alert("Please upload your resume (required).");
+          resume.focus();
+          return;
+        }
+
+        alert("Application submitted!\nWe will contact you soon.");
+        uploadForm.reset();
+        document.querySelectorAll(".file-name").forEach((el) => el.remove());
+      });
+    </script>
+  </body>
+</html>

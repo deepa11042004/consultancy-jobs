@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Access</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body class="admin-access-page">
+  <main class="admin-access-container">
+    <a href="login.html" class="admin-back">
+      <i class="fas fa-arrow-left"></i>
+      Back
+    </a>
+
+    <section class="admin-access-card">
+      <div class="admin-access-header">
+        <div class="admin-access-icon">
+          <i class="fas fa-shield-alt"></i>
+        </div>
+        <h1>Admin Access</h1>
+      </div>
+
+      <form id="adminAccessForm" class="admin-access-form" novalidate>
+        <label for="accessCode">Admin Access Code</label>
+        <input
+          id="accessCode"
+          name="accessCode"
+          type="text"
+          maxlength="20"
+          placeholder="Enter the 20-digit code"
+          inputmode="numeric"
+          pattern="\d{20}"
+          autocomplete="one-time-code"
+          required
+        />
+
+        <button type="submit" class="btn btn-primary w-full">
+          <i class="fas fa-rocket"></i>
+          Access Admin Panel
+        </button>
+      </form>
+    </section>
+  </main>
+
+  <script>
+    const form = document.getElementById('adminAccessForm');
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const code = document.getElementById('accessCode').value.trim();
+      const isValid = /^\d{20}$/.test(code);
+
+      if (!isValid) {
+        alert('Please enter a valid 20-digit admin access code.');
+        return;
+      }
+
+      alert('Access granted. Redirecting to admin panel...');
+      // For demo purposes we just show an alert.
+      // In a real app, replace with a redirect to the actual admin area.
+      // window.location.href = '/admin/dashboard.html';
+    });
+  </script>
+</body>
+</html>
