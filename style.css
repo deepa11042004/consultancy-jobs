@@ -426,10 +426,18 @@ ul {
 }
 
 .cat-img {
-  height: 100px;
+  height: 150px;
   background: #f3f4f6;
   margin: 1rem 0;
   border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.cat-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 /* 4. Top Companies */
@@ -455,16 +463,24 @@ ul {
 }
 
 .company-logo {
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
   background-color: #f3f4f6;
-  border-radius: 50%;
+  border-radius: 8px;
   margin: 0 auto 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: bold;
   color: var(--primary-green);
+  overflow: hidden;
+}
+
+.company-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 8px;
 }
 
 .view-link {
