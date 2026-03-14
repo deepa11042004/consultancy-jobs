@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Jobs - JobPortal</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-transparent jobs-navbar">
+      <div class="container nav-container">
+        <div class="logo">
+          <span class="logo-text">JobPortal</span>
+        </div>
+        <div class="nav-links">
+          <a href="index.html">Home</a>  
+          <a href="all-jobs.html">All Jobs</a>
+          <a href="about-us.html">About Us</a>
+          <a href="contact-us.html">Contact Us</a>
+        </div>
+        <div class="nav-actions">
+          <button class="btn btn-outline">
+            <a href="login.html">Login</a>
+          </button>
+          <button class="btn btn-primary">
+            <a href="login.html" style="color: white; text-decoration: none;">Employer Login</a>
+          </button>
+        </div>
+        <div class="mobile-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main class="all-jobs-page">
+      <div class="container jobs-grid">
+        <!-- FILTERS -->
+        <aside class="filters" aria-label="Job filters">
+          <h2>Filters</h2>
+          <div class="filter-group">
+            <h3>Work mode</h3>
+            <label>
+              <input type="checkbox" /> Work from home
+            </label>
+            <label>
+              <input type="checkbox" /> Work from office
+            </label>
+            <label>
+              <input type="checkbox" /> Hybrid
+            </label>
+          </div>
+
+          <div class="filter-group">
+            <h3>Education</h3>
+            <label>
+              <input type="checkbox" /> Any
+            </label>
+            <label>
+              <input type="checkbox" /> Graduate
+            </label>
+            <label>
+              <input type="checkbox" /> Postgraduate
+            </label>
+          </div>
+
+          <div class="filter-group">
+            <h3>Salary</h3>
+            <label>
+              <input type="checkbox" /> 10k - 20k
+            </label>
+            <label>
+              <input type="checkbox" /> 20k - 30k
+            </label>
+            <label>
+              <input type="checkbox" /> 30k+
+            </label>
+          </div>
+
+          <div class="filter-group">
+            <h3>Gender</h3>
+            <label>
+              <input type="checkbox" /> Any
+            </label>
+            <label>
+              <input type="checkbox" /> Male
+            </label>
+            <label>
+              <input type="checkbox" /> Female
+            </label>
+          </div>
+
+          <div class="filter-group">
+            <h3>Experience</h3>
+            <label>
+              <input type="checkbox" /> Fresher
+            </label>
+            <label>
+              <input type="checkbox" /> 1-2 years
+            </label>
+            <label>
+              <input type="checkbox" /> 3+ years
+            </label>
+          </div>
+        </aside>
+
+        <!-- JOB FEED -->
+        <section class="job-feed">
+          <header class="jobs-header">
+            <h1>Freshers Jobs</h1>
+            <p class="jobs-subtitle">24,358 verified vacancies</p>
+          </header>
+
+          <div class="job-cards">
+            <article class="job-card">
+              <div class="job-card-body">
+                <div class="job-card-title">
+                  <h3>Customer Care Executive</h3>
+                  <span class="job-tag">Freshers allowed</span>
+                </div>
+                <p class="job-meta">
+                  <span><i class="fas fa-building"></i> Teleperformance</span>
+                  <span><i class="fas fa-map-marker-alt"></i> Jalandhar, Punjab</span>
+                </p>
+                <p class="job-meta">
+                  <span><i class="fas fa-money-bill-wave"></i> ₹12,000 - ₹18,000 / month</span>
+                  <span><i class="fas fa-clock"></i> Full time</span>
+                </p>
+              </div>
+              <div class="job-card-actions">
+                <button class="btn btn-outline">View details</button>
+              </div>
+            </article>
+
+            <article class="job-card">
+              <div class="job-card-body">
+                <div class="job-card-title">
+                  <h3>Sales Officer</h3>
+                  <span class="job-tag">Freshers allowed</span>
+                </div>
+                <p class="job-meta">
+                  <span><i class="fas fa-building"></i> HCL Technologies</span>
+                  <span><i class="fas fa-map-marker-alt"></i> Noida, Uttar Pradesh</span>
+                </p>
+                <p class="job-meta">
+                  <span><i class="fas fa-money-bill-wave"></i> ₹15,000 - ₹22,000 / month</span>
+                  <span><i class="fas fa-clock"></i> Full time</span>
+                </p>
+              </div>
+              <div class="job-card-actions">
+                <button class="btn btn-outline">View details</button>
+              </div>
+            </article>
+
+            <article class="job-card">
+              <div class="job-card-body">
+                <div class="job-card-title">
+                  <h3>Data Entry Operator</h3>
+                  <span class="job-tag">Freshers allowed</span>
+                </div>
+                <p class="job-meta">
+                  <span><i class="fas fa-building"></i> Genpact</span>
+                  <span><i class="fas fa-map-marker-alt"></i> Bangalore, Karnataka</span>
+                </p>
+                <p class="job-meta">
+                  <span><i class="fas fa-money-bill-wave"></i> ₹10,000 - ₹14,000 / month</span>
+                  <span><i class="fas fa-clock"></i> Full time</span>
+                </p>
+              </div>
+              <div class="job-card-actions">
+                <button class="btn btn-outline">View details</button>
+              </div>
+            </article>
+
+            <article class="job-card">
+              <div class="job-card-body">
+                <div class="job-card-title">
+                  <h3>Field Sales Executive</h3>
+                  <span class="job-tag">Freshers allowed</span>
+                </div>
+                <p class="job-meta">
+                  <span><i class="fas fa-building"></i> Bajaj Allianz</span>
+                  <span><i class="fas fa-map-marker-alt"></i> Pune, Maharashtra</span>
+                </p>
+                <p class="job-meta">
+                  <span><i class="fas fa-money-bill-wave"></i> ₹14,000 - ₹20,000 / month</span>
+                  <span><i class="fas fa-clock"></i> Full time</span>
+                </p>
+              </div>
+              <div class="job-card-actions">
+                <button class="btn btn-outline">View details</button>
+              </div>
+            </article>
+          </div>
+
+          <!-- FAQ SECTION -->
+          <section class="faq-section">
+            <h2>Commonly asked questions</h2>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button">
+                What documents do I need to apply?
+                <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Generally you will need your resume, identity proof, and education
+                  certificates. Some employers may ask for additional records.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button">
+                Can I apply without experience?
+                <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Yes — many jobs listed as "Freshers allowed" accept applications
+                  from graduates or recent pass-outs with minimal experience.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button">
+                How long does the hiring process take?
+                <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  It varies by employer, but most hiring cycles complete in 2-4 weeks.
+                  You can track application status on your dashboard.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- TESTIMONIALS -->
+          <section class="testimonials-banner">
+            <div class="container testimonials-grid">
+              <div class="testimonials-intro">
+                <h2>What our candidates say</h2>
+                <p>
+                  Real reviews from people who found their first job through JobPortal.
+                </p>
+              </div>
+
+              <div class="testimonials-cards">
+                <div class="testimonial-card">
+                  <div class="testimonial-avatar">R</div>
+                  <div>
+                    <h4>Ravi K.</h4>
+                    <p class="rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i>
+                    </p>
+                    <p>
+                      "Found a job within a week. The dashboard is easy to use and the
+                      job alerts are very helpful."
+                    </p>
+                  </div>
+                </div>
+
+                <div class="testimonial-card">
+                  <div class="testimonial-avatar">S</div>
+                  <div>
+                    <h4>Sneha M.</h4>
+                    <p class="rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i>
+                    </p>
+                    <p>
+                      "The job recommendations are spot on. I got shortlisted within
+                      days and got a call fast."
+                    </p>
+                  </div>
+                </div>
+
+                <div class="testimonial-card">
+                  <div class="testimonial-avatar">A</div>
+                  <div>
+                    <h4>Amit P.</h4>
+                    <p class="rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i>
+                    </p>
+                    <p>
+                      "Love the simple filtering options and the quick apply flow.
+                      Makes job hunting effortless."
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+      <div class="container footer-grid footer-jobs">
+        <div class="footer-col">
+          <h4>Jobs by Category</h4>
+          <ul>
+            <li><a href="#">Sales Jobs</a></li>
+            <li><a href="#">Customer Support Jobs</a></li>
+            <li><a href="#">IT & Software Jobs</a></li>
+            <li><a href="#">Marketing Jobs</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Jobs by City</h4>
+          <ul>
+            <li><a href="#">Jobs in Delhi</a></li>
+            <li><a href="#">Jobs in Mumbai</a></li>
+            <li><a href="#">Jobs in Bangalore</a></li>
+            <li><a href="#">Jobs in Hyderabad</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Resume Builder</a></li>
+            <li><a href="#">Interview Tips</a></li>
+            <li><a href="#">Career Advice</a></li>
+            <li><a href="#">Employer Insights</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <div class="final-footer">
+      <div class="container final-footer-container">
+        <div class="social-side">
+          <span class="logo-text-sm">JobPortal</span>
+          <span class="social-label">Follow us:</span>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="app-side">
+          <span>Get the app:</span>
+          <div class="buttons-small">
+            <button class="btn-xs">App Store</button>
+            <button class="btn-xs">Play Store</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.querySelectorAll('.faq-question').forEach((button) => {
+        button.addEventListener('click', () => {
+          button.classList.toggle('active');
+          const content = button.nextElementSibling;
+          if (!content) return;
+          if (content.style.maxHeight) {
+            content.style.maxHeight = null;
+          } else {
+            content.style.maxHeight = content.scrollHeight + 'px';
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

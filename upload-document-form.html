@@ -19,21 +19,18 @@
     <nav class="navbar">
       <div class="container nav-container">
         <div class="logo">
+          <img src="assets/images/header.jpg" alt="JobPortal" class="logo-img" onerror="this.style.display='none'"/>
           <span class="logo-text">JobPortal</span>
         </div>
         <div class="nav-links">
-          <a href="jobs.html">Jobs</a>
-          <a href="#">Companies</a>
-          <a href="#">Services</a>
-          <a href="#">Resources</a>
+          <a href="index.html">Home</a>
+          <a href="all-jobs.html">All Jobs</a>
+          <a href="about-us.html">About Us</a>
+          <a href="contact-us.html" style="color: var(--primary-green); font-weight: 700;">Contact Us</a>
         </div>
         <div class="nav-actions">
-          <button class="btn btn-outline">
-            <a href="login.html">Login</a>
-          </button>
-          <button class="btn btn-primary">
-            <a href="login.html" style="color: white; text-decoration: none;">Employer Login</a>
-          </button>
+          <button class="btn btn-outline" onclick="window.location.href='login.html'">Login</button>
+          <button class="btn btn-primary" onclick="window.location.href='login.html'" style="color: white; text-decoration: none;">Employer Login</button>
         </div>
         <div class="mobile-toggle">
           <i class="fas fa-bars"></i>

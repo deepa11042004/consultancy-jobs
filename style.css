@@ -33,7 +33,7 @@ body {
 /* Utilities */
 .container {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 20px auto;
   padding: 0 20px;
 }
 
@@ -1078,10 +1078,11 @@ ul {
 /* Upload Documents page */
 .upload-page {
   min-height: 100vh;
-  background: linear-gradient(135deg, #e8e6fe 0%, #f6f2ff 100%);
+  background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
   display: flex;
   flex-direction: column;
-  padding: 2.25rem 1.25rem 3rem;
+  padding: 0;
+  font-family: var(--primary-font);
 }
 
 .upload-header {
@@ -1090,7 +1091,8 @@ ul {
   gap: 1.5rem;
   max-width: 840px;
   width: 100%;
-  margin: 0 auto 2rem;
+  margin: 4rem auto 2rem;
+  padding: 0 1.5rem;
 }
 
 .back-link {
@@ -1098,72 +1100,80 @@ ul {
   align-items: center;
   gap: 0.75rem;
   font-weight: 600;
-  color: rgba(17, 24, 39, 0.8);
+  color: var(--primary-green);
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .back-link:hover {
-  color: rgba(17, 24, 39, 1);
+  color: var(--dark-green);
 }
 
 .upload-title h1 {
-  font-size: 1.85rem;
+  font-size: 2.2rem;
   margin-bottom: 0.25rem;
+  color: var(--primary-green);
+  font-weight: 700;
 }
 
 .upload-title p {
-  font-size: 1rem;
-  color: rgba(17, 24, 39, 0.65);
+  font-size: 1.1rem;
+  color: var(--text-muted);
 }
 
 .upload-container {
   display: flex;
   justify-content: center;
   width: 100%;
+  padding: 0 1.5rem 5rem;
+  flex: 1;
 }
 
 .upload-card {
-  width: min(680px, 100%);
+  width: min(720px, 100%);
   border-radius: var(--radius-xl);
-  background: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
-  padding: 2.25rem;
+  background: var(--white);
+  box-shadow: 0 10px 40px rgba(31, 122, 99, 0.1);
+  padding: 3rem;
+  border-top: 5px solid var(--primary-green);
 }
 
 .upload-card-header {
   display: flex;
   gap: 1rem;
   align-items: flex-start;
-  margin-bottom: 1.75rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1.5rem;
 }
 
 .upload-card-icon {
-  width: 56px;
-  height: 56px;
-  border-radius: 16px;
-  background: rgba(99, 102, 241, 0.13);
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #e6f6f1;
   display: grid;
   place-items: center;
 }
 
 .upload-card-icon i {
-  font-size: 1.5rem;
-  color: #4f46e5;
+  font-size: 1.75rem;
+  color: var(--primary-green);
 }
 
 .upload-card-header h2 {
-  font-size: 1.35rem;
+  font-size: 1.6rem;
   margin-bottom: 0.25rem;
+  color: var(--text-dark);
 }
 
 .upload-card-header p {
-  color: rgba(17, 24, 39, 0.65);
+  color: var(--text-muted);
 }
 
 .upload-form {
   display: grid;
-  gap: 1.25rem;
+  gap: 1.5rem;
 }
 
 .upload-label {
@@ -1171,35 +1181,36 @@ ul {
   align-items: center;
   justify-content: space-between;
   font-weight: 600;
-  color: rgba(17, 24, 39, 0.85);
-  margin-bottom: 0.5rem;
+  color: var(--text-dark);
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
 }
 
 .required {
   color: #ef4444;
   font-size: 0.9rem;
+  font-weight: bold;
 }
 
 .optional {
-  color: rgba(107, 114, 128, 1);
+  color: var(--text-muted);
   font-size: 0.85rem;
+  font-style: italic;
 }
 
 .file-drop {
   position: relative;
-  border: 2px dashed rgba(148, 163, 184, 0.8);
-  border-radius: 16px;
-  padding: 1.3rem 1.25rem;
+  border: 2px dashed var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.5rem;
   cursor: pointer;
-  transition:
-    border-color 0.2s ease,
-    background 0.2s ease;
-  background: rgba(255, 255, 255, 0.9);
+  transition: all 0.3s ease;
+  background: var(--bg-color);
 }
 
-.file-drop.dragover {
-  border-color: rgba(99, 102, 241, 0.9);
-  background: rgba(99, 102, 241, 0.08);
+.file-drop.dragover, .file-drop:hover {
+  border-color: var(--primary-green);
+  background: #f0fdf9;
 }
 
 .file-drop input[type="file"] {
@@ -1212,29 +1223,39 @@ ul {
 .file-drop-content {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.25rem;
 }
 
 .file-drop-content i {
-  font-size: 1.4rem;
-  color: rgba(99, 102, 241, 0.9);
+  font-size: 2rem;
+  color: var(--primary-green);
+}
+
+.file-drop-content strong {
+  display: block;
+  font-size: 1.05rem;
+  color: var(--text-dark);
+  margin-bottom: 0.25rem;
 }
 
 .file-hint {
-  color: rgba(107, 114, 128, 0.95);
+  color: var(--text-muted);
   font-size: 0.85rem;
-  margin-top: 0.25rem;
 }
 
 .file-name {
-  margin-top: 0.75rem;
+  margin-top: 1rem;
   font-weight: 600;
-  color: rgba(17, 24, 39, 0.85);
+  color: var(--primary-green);
+  background: #e6f6f1;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-md);
+  display: inline-block;
 }
 
 @media (max-width: 520px) {
   .upload-card {
-    padding: 1.75rem 1.5rem;
+    padding: 2rem 1.5rem;
   }
 
   .upload-header {
@@ -1742,3 +1763,331 @@ ul {
   color: var(--white);
   font-size: 1.25rem;
 }
+/* --- ALL JOBS PAGE STYLES --- */
+.all-jobs-page {
+  padding: 4rem 0;
+  background: var(--bg-color);
+}
+.jobs-grid {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 1;
+  max-width: 800px;
+}
+
+.search-field {
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  flex: 1;
+}
+
+.search-field i {
+  color: var(--text-muted);
+}
+
+.search-field input,
+.search-field select {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  background: transparent;
+}
+
+.filters {
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  margin-top: 7.3rem;
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 1rem;
+  height: fit-content;
+}
+
+.filters h2 {
+  margin-bottom: 1.25rem;
+  font-size: 1.25rem;
+  color: var(--text-dark);
+}
+
+.filter-group {
+  margin-bottom: 1.5rem;
+}
+
+.filter-group h3 {
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  color: var(--primary-green);
+}
+
+.filter-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  cursor: pointer;
+}
+
+.job-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.jobs-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.jobs-header h1 {
+  font-size: 2rem;
+  color: var(--text-dark);
+}
+
+.jobs-subtitle {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.job-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+.job-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1.5rem;
+  gap: 1.5rem;
+}
+
+.job-card-body {
+  flex: 1;
+}
+
+.job-card-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.job-card-title h3 {
+  font-size: 1.25rem;
+  margin: 0;
+  color: var(--text-dark);
+}
+
+.job-tag {
+  background: rgba(31, 122, 99, 0.15);
+  color: var(--primary-green);
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.job-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  color: var(--text-muted);
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.job-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.job-card-actions {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.faq-section {
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.faq-section h2 {
+  margin-bottom: 1.25rem;
+  color: var(--text-dark);
+}
+
+.faq-item {
+  border-top: 1px solid var(--border-color);
+}
+
+.faq-item:first-child {
+  border-top: none;
+}
+
+.faq-question {
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: 1rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s ease;
+  padding-bottom: 0;
+}
+
+.faq-answer p {
+  margin: 0;
+  color: var(--text-muted);
+  padding-bottom: 1rem;
+}
+
+.faq-question.active + .faq-answer {
+  max-height: 200px;
+}
+
+.testimonials-banner {
+  background: var(--primary-green);
+  color: var(--white);
+  padding: 2.5rem 0;
+  border-radius: var(--radius-lg);
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.testimonials-intro h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.testimonials-intro p {
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+}
+
+.testimonials-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.testimonial-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.testimonial-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.testimonial-card h4 {
+  margin: 0 0 0.25rem;
+  color: var(--white);
+}
+
+.rating {
+  color: #fbbf24;
+  margin: 0 0 0.75rem;
+}
+
+.testimonial-card p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.95rem;
+}
+
+.footer-jobs .footer-col {
+  flex: 1;
+}
+
+@media (max-width: 1024px) {
+  .jobs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .filters {
+    position: static;
+    top: auto;
+    margin-bottom: 2rem;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonials-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .search-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-bar button {
+    width: 100%;
+  }
+}
+/* Jobs page navbar spacing */
+.jobs-navbar {
+  padding-bottom: 3rem;
+}
+
+\n/* Make buttons with links inherit button styling without inline styling */\n.btn a, .btn a:visited {\n  color: inherit;\n  text-decoration: none;\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  width: 100%;\n  height: 100%;\n}\n
